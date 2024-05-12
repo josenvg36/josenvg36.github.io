@@ -1,10 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Page</title>
+    <style>
+        /* Base styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f0f0f0; /* Light mode background */
+            color: #333; /* Light mode text */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 18px;
+            padding: 0 20px;
+        }
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .description {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .image-container {
+                max-width: 90%;
+            }
+            p, .description {
+                padding: 0 10px;
+            }
+        }
+
+        /* Dark mode styles */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #333; /* Dark mode background */
+                color: #f0f0f0; /* Dark mode text */
+            }
+            h1 {
+                color: #c0c0c0; /* Adjusted color for better visibility in dark mode */
+            }
+        }
+    </style>
 </head>
 <body>
     <h1>About Us</h1>
     <p>This is a detailed description about our project...</p>
+
+    <div class="image-container">
+        <img src="images/image1.png" alt="Project Image 1">
+        <p class="description">Description for Project 1</p>
+    </div>
+
+    <div class="image-container">
+        <img src="images/image2.png" alt="Project Image 2">
+        <p class="description">Description for Project 2</p>
+    </div>
+
+    <div class="image-container">
+        <img src="images/image3.png" alt="Project Image 3">
+        <p class="description">Description for Project 3</p>
+    </div>
 </body>
 </html>
+
