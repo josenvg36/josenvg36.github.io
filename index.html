@@ -5,77 +5,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>José Alejandro Najul van Grieken - Resume</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        h1, h2 { color: navy; }
-        ul { list-style-type: none; }
-        li { margin-bottom: 10px; }
-        .section { margin-bottom: 20px; }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #0779e4 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header .highlight, header .current a {
+            color: #0779e4;
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #cccccc;
+            font-weight: bold;
+        }
+        .content {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+        }
+        .content h2 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+        }
+        li {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>José Alejandro Najul van Grieken</h1>
-        <p>Email: <a href="mailto:joseanajul94@gmail.com">joseanajul94@gmail.com</a></p>
-        <!-- <p>Phone: +34-611.695.766</p> -->
-        <p>LinkedIn: <a href="https://linkedin.com/in/joseanajul">linkedin.com/in/joseanajul</a></p>
+        <div class="container">
+            <div id="branding">
+                <h1>José Alejandro Najul van Grieken</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="https://josenvg36.github.io/">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="cloud.html">Tech Blogspot</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section class="section">
-        <a href="projects.html">Projects</a>
-    </section>
-
-    <section class="section">
-        <a href="cloud.html">Tech Blogspot</a>
-    </section>
+    <div class="container">
+        <section class="content">
+            <h2>Contact Information</h2>
+            <p>Email: <a href="mailto:joseanajul94@gmail.com">joseanajul94@gmail.com</a></p>
+            <!-- <p>Phone: +34-611.695.766</p> -->
+            <p>LinkedIn: <a href="https://linkedin.com/in/joseanajul">linkedin.com/in/joseanajul</a></p>
+        </section>
     
-    <section class="section">
-        <h2>Education</h2>
-        <ul>
-            <li><strong>Universidad Metropolitana, Caracas, Venezuela</strong><br>
-                Bachelor of Science in Mechanical Engineering, 2014 - 2018</li>
-        </ul>
-    </section>
-
-    <section class="section">
-        <h2>Experience</h2>
-        <ul>
-            <li><strong>Field Service Engineer</strong>, Nabtesco Marine Europe B.V., Rotterdam, NL (Sept 2021 - Present)
-                <ul>
-                    <li>Maintenance of Kawasaki side thrusters for marine vessels</li>
-                    <li>Prepare and execute maintenance planning and troubleshooting</li>
-                    <li>Supervise small group personnel</li>
-                </ul>
-            </li>
-            <li><strong>Mechanical Engineer</strong>, Ideart, Caracas, Venezuela (Apr 2019 - Dec 2020)
-                <ul>
-                    <li>Project planning and execution</li>
-                    <li>CAD design and metalworking</li>
-                    <li>Supervised sales and customer service operations</li>
-                </ul>
-            </li>
-            <li><strong>Intern Engineer</strong>, Union Signs, Caracas, Venezuela (Apr 2018 - Mar 2019)
-                <ul>
-                    <li>Assisted in mechanical engineering projects</li>
-                    <li>Worked with CNC programming and AutoCAD design</li>
-                </ul>
-            </li>
-        </ul>
-    </section>
-
-    <section class="section">
-        <h2>Skills</h2>
-        <ul>
-            <li>Technical Skills: AutoCAD, Microsoft Office, Inventor, CNC Programming, Python, VBA</li>
-            <li>Languages: Spanish (Native), English (Advanced - C1)</li>
-        </ul>
-    </section>
-
-    <section class="section">
-        <h2>Additional Information</h2>
-        <ul>
-            <li>Available for relocation nationally and internationally</li>
-            <li>Holder of a B2 driver's license</li>
-        </ul>
-    </section>
+        <section class="content">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>Universidad Metropolitana, Caracas, Venezuela</strong><br>
+                    Bachelor of Science in Mechanical Engineering, 2014 - 2018</li>
+            </ul>
+        </section>
+    
+        <section class="content">
+            <h2>Experience</h2>
+            <ul>
+                <li><strong>Field Service Engineer</strong>, Nabtesco Marine Europe B.V., Rotterdam, NL (Sept 2021 - Present)
+                    <ul>
+                        <li>Maintenance of Kawasaki side thrusters for marine vessels</li>
+                        <li>Prepare and execute maintenance planning and troubleshooting</li>
+                        <li>Supervise small group personnel</li>
+                    </ul>
+                </li>
+                <li><strong>Mechanical Engineer</strong>, Ideart, Caracas, Venezuela (Apr 2019 - Dec 2020)
+                    <ul>
+                        <li>Project planning and execution</li>
+                        <li>CAD design and metalworking</li>
+                        <li>Supervised sales and customer service operations</li>
+                    </ul>
+                </li>
+                <li><strong>Intern Engineer</strong>, Union Signs, Caracas, Venezuela (Apr 2018 - Mar 2019)
+                    <ul>
+                        <li>Assisted in mechanical engineering projects</li>
+                        <li>Worked with CNC programming and AutoCAD design</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    
+        <section class="content">
+            <h2>Skills</h2>
+            <ul>
+                <li>Technical Skills: AutoCAD, Microsoft Office, Inventor, CNC Programming, Python, VBA</li>
+                <li>Languages: Spanish (Native), English (Advanced - C1)</li>
+            </ul>
+        </section>
+    
+        <section class="content">
+            <h2>Additional Information</h2>
+            <ul>
+                <li>Available for relocation nationally and internationally</li>
+                <li>Holder of a B2 driver's license</li>
+            </ul>
+        </section>
+    </div>
 </body>
 </html>
