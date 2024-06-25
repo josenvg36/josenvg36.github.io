@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Experience Creating a Website with Flask, Fly.io, and GCP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #0779e4 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header .highlight, header .current a {
+            color: #0779e4;
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #cccccc;
+            font-weight: bold;
+        }
+        #showcase {
+            min-height: 400px;
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding-top: 100px;
+        }
+        #showcase h1 {
+            font-size: 55px;
+            margin-top: 0;
+        }
+        #showcase p {
+            font-size: 20px;
+        }
+        .content {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+        }
+        .content h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>My Tech Blog</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li class="current"><a href="#">Blog</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>My Experience Creating a Website with Flask, Fly.io, and GCP</h1>
+            <p>Sharing my journey of web development with Flask and deploying on Fly.io and Google Cloud Platform.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="content">
+            <h2>Starting with Flask</h2>
+            <p>I chose Flask as the framework for my website due to its simplicity and flexibility. Flask allows you to build web applications quickly without the overhead of more extensive frameworks. Here’s a step-by-step breakdown of my process:</p>
+            <h3>Setting Up Flask:</h3>
+            <p>I started by installing Flask and other necessary dependencies using pip:</p>
+            <pre><code>pip install Flask</code></pre>
+            <p>I created a simple Flask application to serve as the foundation for my website. Here’s a basic example of the <code>app.py</code> file I used:</p>
+            <pre><code>from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Hello, Flask!"
+
+if __name__ == '__main__':
+    app.run(debug=True)</code></pre>
+            <h3>Local Testing:</h3>
+            <p>Running the application locally was straightforward. I used the command:</p>
+            <pre><code>python app.py</code></pre>
+            <p>The website ran smoothly on my local machine, which gave me the confidence to move forward with deploying it to a cloud server.</p>
+            <h2>Attempting to Use Fly.io</h2>
+            <p>My initial choice for deployment was Fly.io, a cloud platform known for its simplicity and developer-friendly features.</p>
+            <h3>Setting Up Fly.io:</h3>
+            <p>I followed the official Fly.io documentation to set up my environment and deploy the Flask app. The process involved installing Flyctl, Fly.io's command-line tool, and creating a new Fly.io application:</p>
+            <pre><code>flyctl launch</code></pre>
+            <p>During this setup, I encountered issues with generating the necessary Docker files for my Flask app.</p>
+            <h3>Encountering Issues:</h3>
+            <p>Despite following the steps meticulously, I ran into errors that prevented the successful creation of Docker images. These errors hindered my ability to link my Flask application with the Fly.io server. The error messages were vague, making troubleshooting challenging. After several attempts, I decided to explore other options.</p>
+            <h2>Switching to Google Cloud Platform (GCP)</h2>
+            <p>Given the challenges with Fly.io, I turned to Google Cloud Platform (GCP), which offers robust infrastructure and extensive documentation.</p>
+            <h3>Creating a Virtual Machine (VM):</h3>
+            <p>I started by setting up a VM instance on GCP. Initially, I chose Debian as the operating system but soon switched to Ubuntu for its familiarity and ease of use. Creating a new VM with Ubuntu was straightforward using the GCP Console.</p>
+            <h3>Setting Up the Environment:</h3>
+            <p>On the new VM, I installed the necessary packages for running Flask:</p>
+            <pre><code>sudo apt update
+sudo apt install python3-pip
+pip3 install Flask</code></pre>
+            <p>I transferred my Flask application files to the VM using SCP (Secure Copy Protocol).</p>
+            <h3>Deploying the Flask Application:</h3>
+            <p>After configuring the VM, I ran my Flask application. To ensure it was accessible over the internet, I configured the firewall rules to allow HTTP traffic. Running the Flask application on the VM was a success. My website was live, and I could access it via the external IP provided by GCP.</p>
+            <h2>Conclusion</h2>
+            <p>This journey taught me valuable lessons about deploying web applications. Here are my key takeaways:</p>
+            <ul>
+                <li>Flask is a powerful and easy-to-use framework for web development.</li>
+                <li>Fly.io, while promising, had some deployment challenges that I couldn’t overcome.</li>
+                <li>Google Cloud Platform proved to be a reliable and versatile solution for hosting my Flask application.</li>
+            </ul>
+            <p>Overall, using GCP for deploying my Flask app was a great success, and I look forward to building more projects with this setup. From now on, I’ll confidently use Flask in conjunction with Google Cloud services to host my web applications.</p>
+        </section>
+    </div>
+</body>
+</html>
