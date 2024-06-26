@@ -34,10 +34,11 @@
         header ul {
             padding: 0;
             list-style: none;
+            position: relative;
         }
         header li {
-            display: inline;
-            padding: 0 20px 0 20px;
+            display: inline-block;
+            padding: 0 20px;
         }
         header #branding {
             float: left;
@@ -57,6 +58,10 @@
             color: #cccccc;
             font-weight: bold;
         }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
         .dropdown-content {
             display: none;
             position: absolute;
@@ -74,7 +79,10 @@
         .dropdown-content a:hover {
             background-color: #575757;
         }
-        .current:hover .dropdown-content {
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-click .dropdown-content {
             display: block;
         }
         .content {
@@ -95,6 +103,12 @@
             margin-bottom: 10px;
         }
     </style>
+    <script>
+        function toggleDropdown() {
+            var element = document.getElementById("dropdown");
+            element.classList.toggle("dropdown-click");
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -106,9 +120,9 @@
                 <ul>
                     <li><a href="https://josenvg36.github.io/">Home</a></li>
                     <li><a href="projects.html">Projects</a></li>
-                    <li class="current">
-                        <a href="#">Tech Blogspot</a>
-                        <div class="dropdown-content">
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="current" onclick="toggleDropdown()">Tech Blogspot</a>
+                        <div id="dropdown" class="dropdown-content">
                             <a href="cloud.html">Creating website (Flask)</a>
                             <a href="fdf_exp.html">fdf 42 experience</a>
                         </div>
@@ -178,4 +192,5 @@
     </div>
 </body>
 </html>
+
 
