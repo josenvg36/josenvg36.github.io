@@ -57,64 +57,33 @@
             color: #cccccc;
             font-weight: bold;
         }
+        #showcase {
+            min-height: 400px;
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding-top: 100px;
+        }
+        #showcase h1 {
+            font-size: 55px;
+            margin-top: 0;
+        }
+        #showcase p {
+            font-size: 20px;
+        }
         .content {
             padding: 20px;
             background: #fff;
             margin-top: 20px;
         }
-        .content h1 {
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 20px;
+        .content h2 {
+            color: #333;
         }
         .content p {
             margin-bottom: 20px;
             text-align: justify;
             font-size: 16px;
             padding: 0 15px;
-        }
-        .image-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 40px;
-            width: 100%;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .image-container img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .description {
-            text-align: center;
-            margin-top: 10px;
-            font-size: 14px;
-            color: #555;
-        }
-        @media (max-width: 600px) {
-            body {
-                padding: 10px;
-            }
-            .image-container {
-                max-width: 100%;
-            }
-            p, .description {
-                padding: 0;
-                font-size: 14px;
-            }
-        }
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #333;
-                color: #f0f0f0;
-            }
-            h1, .description {
-                color: #c0c0c0;
-            }
         }
     </style>
 </head>
@@ -126,19 +95,23 @@
             </div>
             <nav>
                 <ul>
-                     <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="cloud.html">Creating Website (Flask)</a></li>
-                    <li class="current"><a href="fdf_exp.htm">Fdf 42 Experience</a></li>
+                    <li class="current"><a href="fdf_exp.html">Fdf 42 Experience</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <div class="container">
-        <section class="content">
+    <section id="showcase">
+        <div class="container">
             <h1>My Journey Building the FDF Project at 42 Academy</h1>
             <p>Embarking on the FDF project at 42 Academy has been an exhilarating journey, filled with challenges and rewarding moments. This blog post captures my experiences, detailing the hurdles I faced, the learning curves I encountered, and the milestones I achieved while building this project.</p>
+        </div>
+    </section>
 
+    <div class="container">
+        <section class="content">
             <h2>The Initial Struggle: Getting MinilibX to Work</h2>
             <p>The first major hurdle was not merely installing the MinilibX library, but getting it to actually start and run correctly. This step was unexpectedly tricky due to the need for proper configuration, which wasn't straightforward. I spent hours troubleshooting, reading through documentation, and scouring forums for tips on how to set up the library properly. The key was understanding the dependencies and environment settings required to get the graphical window to initialize correctly.</p>
 
